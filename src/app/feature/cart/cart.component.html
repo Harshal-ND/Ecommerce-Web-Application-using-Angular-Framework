@@ -1,0 +1,53 @@
+
+
+<div class="ng-container" *ngIf="products_in_the_cart.length!=0">
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Image</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <!-- <th scope="col">Quantity</th> -->
+                <!-- <th scope="col">Total</th> -->
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products_in_the_cart; let i = index">
+               
+                <td>{{i+1}}</td>
+                <td>{{product.title}}</td>
+                <td><img src="{{product.images}}" style="width: 250px;"></td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+                <!-- <td>10</td>
+                <td>5000</td> -->
+                <td><button (click)="removeItem(product)"><i class="bi bi-trash3-fill"></i></button></td>
+                
+              </tr>
+            
+              
+            </tbody>
+          </table>
+    </div>
+     
+
+
+</div>
+
+<div class="ng-container" *ngIf="products_in_the_cart.length==0">
+    <div class="container">
+     
+              <div class="row mt-5" id="empty_msg">
+                <div class="col-lg-4 offset-lg-4">
+                  <div><img [src]="empty_image" style="width: 200px;"></div>
+                  <p>It feels so light. There's nothing in your cart</p>
+                  <p>Lets add some items</p>
+                  <button type="button" class="btn btn-primary" [routerLink]="['/products']">Back to Products</button>
+                </div>
+            </div>
+     
+</div>

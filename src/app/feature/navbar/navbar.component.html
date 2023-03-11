@@ -1,0 +1,55 @@
+
+<nav class="navbar navbar-expand-lg mx-auto mt-2 sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"> 
+        
+        <img src="assets/logo.png">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2" id="hnd1">
+            <a class="nav-link active" [routerLink]="['/home']" > Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active"  >About Us</a>
+          </li>
+
+          <li class="nav-item mx-2">
+            <a class="nav-link active" [routerLink]="['/products']">Products</a>
+          </li>
+         
+          <li class="nav-item mx-2">
+            <a class="nav-link active" >Contact</a>
+          </li>
+
+      
+        </ul>
+
+          <!-- search option -->
+
+        <form class="d-flex" role="search">
+          <!-- <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchBy" [ngModelOptions]="{standalone:true}"> -->
+          <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
+          <!-- <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button> -->
+          <!-- <div><p>{{search}}</p></div> -->
+        </form>
+        
+        <!-- badge coding -->
+        <a class="nav-link active" [routerLink]="['/cart']">
+         <button type="button" class="btn btn-success position-relative">
+            <i class="bi bi-cart4"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{total_items_in_the_cart}}
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+

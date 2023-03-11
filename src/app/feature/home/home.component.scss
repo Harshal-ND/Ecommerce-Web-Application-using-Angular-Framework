@@ -1,0 +1,51 @@
+.carousel-inner
+{
+    height: 600px;
+}
+.carousel-item img
+{
+    height: 700px;
+}
+
+.carousel-caption
+{
+   
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top:200px;
+    animation-name: slideup;
+    animation-duration: 2s;
+    font-size: 100px;
+}
+
+@keyframes slideup
+{
+    from{
+        font-size: 20px;
+        top:500px
+    }
+    to{
+        font-size: 100px;
+        top:200px
+    }
+    
+}
+
+.quote
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+     font-size: 40px;
+     margin: 150px ;
+}
+
+.p2{
+    text-align: center;
+    margin: 20px 1px;
+    font-size: 25px;
+}
+
+.hnd1:hover
+{
+    transition-duration: 0.5s;
+    transform: scale(1.05) ;
+}

@@ -1,0 +1,36 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <p style="text-align: center; font-size: medium;">Shop by Category</p>
+            <div class="card-body" style="width: 18rem;">
+              
+                <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="All" autocomplete="off" >
+                    <label class="btn " for="All" (click)="filterto('all')">All</label>
+
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                    <label class="btn" for="vbtn-radio2" (click)="filterto('Clothes')">Clothes</label>
+
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                    <label class="btn" for="vbtn-radio3" (click)="filterto('electronics')">Electronics</label>
+
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off">
+                    <label class="btn" for="vbtn-radio4" (click)="filterto('furniture')">Furniture</label>
+
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio5" autocomplete="off">
+                    <label class="btn" for="vbtn-radio5" (click)="filterto('Shoes')">Footwear</label>
+                  </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="row mt-5">
+        <!-- <label for="customRange3" class="form-label">Example range</label> -->
+        <p style="font-size: medium;">Price Range upto</p>
+        <input type="range" class="form-range" min="0" max="1500" step="20" id="customRange3" [(ngModel)]="range_value">
+        <p>{{price_upto|currency}}</p>
+    </div>
+</div>

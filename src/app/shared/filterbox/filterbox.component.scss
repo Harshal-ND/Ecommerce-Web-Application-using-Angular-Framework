@@ -1,0 +1,32 @@
+
+.card
+{
+    // background-color: rgb(234, 234, 234);
+    background-color: white;
+    border-radius: opx;
+    border-color: white;
+    width: 70%;
+    
+}
+.btn-group-vertical
+{
+    background-color: rgb(234, 234, 234);
+}
+
+.btn-group-vertical label{
+    border-radius: 0px;
+    border-color: white;
+    color: black;
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+.btn-group-vertical label:hover{
+   transform: scale(1.2);
+}
+
+.form-range
+{
+    width: 70%;
+    background-color: rgb(234, 234, 234);
+    
+}
